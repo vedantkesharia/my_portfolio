@@ -55,7 +55,7 @@ export const Banner = () => {
   }
 
   const handleScrollToConnect = () => {
-    window.location.href="https://drive.google.com/file/d/1n98bLz1pmMXMPjRre85xidZoq1LGXASk/view?usp=drivesdk";
+    window.location.href="https://drive.google.com/file/d/1FDrSn8rJuWzho3f5bYBosAKO0raMO_cg/view?usp=drivesdk";
   };
 
 
