@@ -12,6 +12,9 @@ import socialbay_img from "../assets/img/SocialBay_img.jpeg"
 import textutils_img from "../assets/img/textutils_img.jpeg"
 import newstoday_img from "../assets/img/newstoday_img.jpeg"
 import vchat_img from "../assets/img/vchat_img.jpeg"
+import videoverse_img from "../assets/img/videoverse_img.jpeg"
+import todo_img from "../assets/img/todo_img.jpeg"
+import quizcards_img from "../assets/img/quizcards_img.jpeg"
 import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Reveal';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -40,14 +43,10 @@ export const Projects = () => {
       description: "Note taking application using ReactJs, HTML, Bootstrap, NodeJs, ExpressJs, MongoDB, Rest API, jwt authentication etc... ",
       imgUrl: evernote_img,
     },
-    
-  ];
-
-  const projects2=[
     {
-      title: "NewsToday",
-      description: "A website that provides latest news cards to the user API fetching,ReactJs, HTML, Bootstrap, javascript etc...",
-      imgUrl: newstoday_img,
+      title: "VideoVerse",
+      description: " Youtube clone using API fetching with video search play functionality using ReactJs, Material UI",
+      imgUrl: videoverse_img,
     },
     {
       title: "vChat",
@@ -55,9 +54,29 @@ export const Projects = () => {
       imgUrl: vchat_img,
     },
     {
+      title: "NewsToday",
+      description: "A website that provides latest news cards to the user API fetching,ReactJs, HTML, Bootstrap, javascript etc...",
+      imgUrl: newstoday_img,
+    },
+    
+  ];
+
+  const projects2=[
+
+    {
       title: "TextUtils",
       description: "An app that accepts text from user and performs certain tasks like Text to Speech,removing extra spaces,converting to upper/lower case etc...",
       imgUrl: textutils_img,
+    },
+    {
+      title: "Todo List",
+      description: "An app to keep a track of your daily tasks Tech : ReactJS, HTML, CSS, javascript",
+      imgUrl: todo_img,
+    },
+    {
+      title: "Quiz Cards",
+      description: "",
+      imgUrl: quizcards_img,
     },
   ]
 

@@ -55,10 +55,7 @@ export const Banner = () => {
   }
 
   const handleScrollToConnect = () => {
-    const connectSection = document.getElementById("connect");
-    if (connectSection) {
-      connectSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.location.href="https://drive.google.com/file/d/1n98bLz1pmMXMPjRre85xidZoq1LGXASk/view?usp=drivesdk";
   };
 
 
@@ -79,7 +76,7 @@ export const Banner = () => {
                   </Fade>
 
                   <Fade left cascade>
-                  <button onClick={handleScrollToConnect}>Let's Connect <ArrowRightCircle size={25} />
+                  <button onClick={handleScrollToConnect}>My Resume <ArrowRightCircle size={25} />
                   </button>
                   </Fade>
                 
