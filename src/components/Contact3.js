@@ -23,7 +23,7 @@ const Contact3 = () => {
     
       const [errors, setErrors] = useState({});
     
-      const validateForm = () => {
+      const validateForm = () =>{
         let isValid = true;
         const newErrors = {};
     
@@ -38,18 +38,18 @@ const Contact3 = () => {
         }
     
         if (formData.user_email.trim() === '') {
-          newErrors.user_email = 'user_email is required';
+          newErrors.user_email = 'Email is required';
           isValid = false;
         } else if (!/\S+@\S+\.\S+/.test(formData.user_email)) {
-          newErrors.user_email = 'user_email is invalid';
+          newErrors.user_email = 'Email is invalid';
           isValid = false;
         }
     
         if (formData.user_phone.trim() === '') {
-          newErrors.user_phone = 'user_phone number is required';
+          newErrors.user_phone = 'Phone number is required';
           isValid = false;
         } else if (!/^\d{10}$/.test(formData.user_phone)) {
-          newErrors.user_phone = 'user_phone number is invalid';
+          newErrors.user_phone = 'Phone number is invalid';
           isValid = false;
         }
     
@@ -60,7 +60,7 @@ const Contact3 = () => {
     
         setErrors(newErrors);
         return isValid;
-      };
+      }
     
       const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -77,15 +77,10 @@ const Contact3 = () => {
           // Perform form submission logic here
           console.log('Form submitted:', formData);
           // Clear the form
-          setFormData({
-            user_firstname: '',
-            user_lastname: '',
-            user_email: '',
-            user_phone: '',
-            message: ''
-          });
+
         }
       };
+
 
 
     const [buttonText, setButtonText] = useState('Send');
@@ -94,23 +89,50 @@ const Contact3 = () => {
         setButtonText("Sending...");
     }
 
-    
+
+
     const form = useRef();
+    var form2 = document.getElementById("myform");
 
   const senduser_email = (e) => {
     e.preventDefault();
+    
+
+
+    if(validateForm()){
 
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
-          console.log("message sent")
+          console.log("message sent");
+          setButtonText("Sent Successfully!");
+          document.getElementById("input_mail2").style.backgroundColor="#28a745";
+          
       }, (error) => {
           console.log(error.text);
+          setButtonText("Mail Not Sent!");
+          document.getElementById("input_mail2").style.backgroundColor="#dc3545";
       });
 
 
 
+
+       setFormData({
+        user_firstname: '',
+        user_lastname: '',
+        user_email: '',
+        user_phone: '',
+        message: ''
+      });
     }
+    }
+
+    // function clearFormFields() {
+    //   let inputs = form.current.querySelectorAll("input","textarea");
+    //   inputs.forEach(function(input) {
+    //     input.value = ""; 
+    //   });
+    // }
 
 
   return (
@@ -132,7 +154,7 @@ const Contact3 = () => {
                     <Fade right>
                 <h2>Get In Touch</h2>
                 </Fade>
-                <form  ref={form} onSubmit={senduser_email}>
+                <form id="myform" ref={form} onSubmit={senduser_email}>
                 <Fade right>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
@@ -141,7 +163,7 @@ const Contact3 = () => {
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" name="user_lastname" placeholder="Last Name" value={formData.user_lastname} onChange={handleInputChange} />
-                      {errors.user_lasttname && <span className="error">{errors.user_lastname}</span>}
+                      {errors.user_lastname && <span className="error">{errors.user_lastname}</span>}
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input  type="user_email" name="user_email" placeholder="Email Address" value={formData.user_email} onChange={handleInputChange} />
@@ -155,7 +177,7 @@ const Contact3 = () => {
                       <textarea rows="6" minLength="5" name="message" placeholder="Message"  value={formData.message} onChange={handleInputChange}></textarea>
                       {/* <button onClick={handleSubmit} type="submit" value="Send"><span>{buttonText}</span></button> */}
                       {errors.message && <span className="error">{errors.message}</span>}
-                      <input className='input_mail' type="submit" value={buttonText} />
+                      <input id="input_mail2" className='input_mail' type="submit" value={buttonText} />
                     </Col>
                     {/* {
                       status.message &&
