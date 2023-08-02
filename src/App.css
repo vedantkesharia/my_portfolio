@@ -312,7 +312,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media (max-width: 767px) {
   .banner img {
     animation: updown 3s linear infinite;
-    /* Set your desired margin-top value for smaller screens */
     /* margin-top: 0; */
   }
 }
