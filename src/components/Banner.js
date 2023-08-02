@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
+import headerImg3 from "../assets/img/header5_img.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -55,7 +56,7 @@ export const Banner = () => {
   }
 
   const handleScrollToConnect = () => {
-    window.location.href="https://drive.google.com/file/d/1FDrSn8rJuWzho3f5bYBosAKO0raMO_cg/view?usp=drivesdk";
+    window.location.href="https://drive.google.com/file/d/1H1T-DnWj3jdeGzY0ElCF7_gHhynl3i5H/view?usp=sharing";
   };
 
 
@@ -87,7 +88,8 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div >
-                  <img src={headerImg} alt="Header Img"/>
+                  {/* <img src={headerImg} alt="Header Img"/> */}
+                  <img src={headerImg3} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
           </Col>

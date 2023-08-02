@@ -15,6 +15,10 @@ import vchat_img from "../assets/img/vchat_img.jpeg"
 import videoverse_img from "../assets/img/videoverse_img.jpeg"
 import todo_img from "../assets/img/todo_img.jpeg"
 import quizcards_img from "../assets/img/quizcards_img.jpeg"
+import flexibble_img from "../assets/img/flexibble_img.jpeg"
+import blognest_img from "../assets/img/blognest_img.jpeg"
+import iphone_site_img from "../assets/img/iphone_site_img.jpeg"
+import brainai_img from "../assets/img/brainai_img.jpeg"
 import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Reveal';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -32,32 +36,39 @@ export const Projects = () => {
       title: "Ongoing Cdac Project",
       description: "Virtual lab for students to explain them probability using dice simulation",
       imgUrl: cdac_img,
+      projecturl:'https://github.com/vedantkesharia/vedant1_cdac/tree/master'
     },
     {
       title: "SocialBay",
       description: "This is a social media website made by tools like MUI, ReactJs, NodeJs, ExpressJs, MongoDB etc...",
       imgUrl: socialbay_img,
+      projecturl:'http://thesocialbay.netlify.app/'
     },
     {
       title: "EverNote",
       description: "Note taking application using ReactJs, HTML, Bootstrap, NodeJs, ExpressJs, MongoDB, Rest API, jwt authentication etc... ",
       imgUrl: evernote_img,
+      projecturl:'https://myevernotes.netlify.app/'
     },
     {
       title: "VideoVerse",
       description: " Youtube clone using API fetching with video search play functionality using ReactJs, Material UI",
       imgUrl: videoverse_img,
+      projecturl:'http://thevideoverse.netlify.app/'
     },
     {
       title: "vChat",
       description: "A real time chatting application using ReactJs, CSS, HTML, Firebase",
       imgUrl: vchat_img,
+      projecturl:'https://github.com/vedantkesharia/vchat/tree/master'
     },
     {
-      title: "NewsToday",
-      description: "A website that provides latest news cards to the user API fetching,ReactJs, HTML, Bootstrap, javascript etc...",
-      imgUrl: newstoday_img,
+      title: "BrainAI",
+      description: "An AI web application with functions like code/music/video/image generation from any text",
+      imgUrl: brainai_img,
+      projecturl:"https://brainai.vercel.app/"
     },
+   
     
   ];
 
@@ -67,19 +78,45 @@ export const Projects = () => {
       title: "TextUtils",
       description: "An app that accepts text from user and performs certain tasks like Text to Speech,removing extra spaces,converting to upper/lower case etc...",
       imgUrl: textutils_img,
+      projecturl:"https://github.com/vedantkesharia/TextUtils-App/tree/master"
+    },
+    {
+      title: "Flexibble",
+      description: " Full stack web application to showcase and share your projects ,Tech : NextJS, HTML, Tailwind CSS, cloudinary, NodeJs",
+      imgUrl: flexibble_img,
+      projecturl:"https://flexibble-flax.vercel.app/"
+    },
+    {
+      title: "BlogNest",
+      description: " A full stack web application where users can create and showcase their own personalized blogs using Reactjs, NodeJs, ExpressJs, Bootstrap",
+      imgUrl: blognest_img,
+      projecturl:"https://github.com/vedantkesharia/BlogNest/tree/master"
+    },
+    {
+      title: "Iphone Landing Site",
+      description: "Iphone landing site using GSAP animation, threejs, HTML",
+      imgUrl: iphone_site_img,
+      projecturl:"http://iphonelandingsite.netlify.app/"
     },
     {
       title: "Todo List",
-      description: "An app to keep a track of your daily tasks Tech : ReactJS, HTML, CSS, javascript",
+      description: "A web application to keep a track of your daily tasks Tech : ReactJS, HTML, CSS, javascript",
       imgUrl: todo_img,
+      projecturl:"https://github.com/vedantkesharia/Todo-App/tree/master"
     },
     {
-      title: "Quiz Cards",
-      description: "",
-      imgUrl: quizcards_img,
+      title: "NewsToday",
+      description: "A website that provides latest news cards to the user API fetching,ReactJs, HTML, Bootstrap, javascript etc...",
+      imgUrl: newstoday_img,
+      projecturl:"https://github.com/vedantkesharia/News-App_newstoday/tree/master"
     },
   ]
 
+  const handleclick = (projecturl) => {
+    if (projecturl) {
+      window.location.href = projecturl;
+    }
+  }
 
   return (
     <section className="project" id="project">
@@ -116,6 +153,7 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
+                                onClick={handleclick}
                                 />
                             )
                           })
@@ -130,6 +168,7 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
+                                onClick={handleclick}
                                 />
                             )
                           })

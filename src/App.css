@@ -296,9 +296,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
+/* .banner img {
   animation: updown 3s linear infinite;
+  margin-top: -45px;
+} */
+
+@media (min-width: 768px) {
+  .banner img {
+    animation: updown 3s linear infinite;
+    margin-top: -45px;
+  }
 }
+
+/* For smaller screens */
+@media (max-width: 767px) {
+  .banner img {
+    animation: updown 3s linear infinite;
+    /* Set your desired margin-top value for smaller screens */
+    /* margin-top: 0; */
+  }
+}
+
+
 @keyframes updown {
     0% {
         transform: translateY(-20px);
@@ -428,6 +447,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
+  cursor: pointer;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
