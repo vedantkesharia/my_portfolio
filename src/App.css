@@ -118,10 +118,18 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
+  margin:0 10px;
+  padding: 10px 20px;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    opacity: 1;
+  opacity: 1;
+  /* background-color:rgb(120, 237, 120);
+  background-color:rgb(230, 171, 246); */
+  /* background-color:rgb(171, 38, 208); */
+  background-color:rgb(255, 255, 255);
+  color:black !important;
+  border-radius: 8px;
 }
 span.navbar-text {
     display: flex;
@@ -248,7 +256,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  /* background-image: url('./assets/img/banner-bg.png'); */
+  background-image: url('./assets/img/space_gif1.gif');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -305,6 +314,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner img {
     animation: updown 3s linear infinite;
     margin-top: -45px;
+    margin-left: -40px;
+    height: 130%;
+    width:130%;
   }
 }
 
@@ -312,6 +324,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner img {
     animation: updown 3s linear infinite;
     /* margin-top: 0; */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 140%;
   }
 }
 
