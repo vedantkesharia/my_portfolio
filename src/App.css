@@ -755,13 +755,69 @@ span.project-text2 {
   display: flex;
   align-items: center;
 }
-
+/* @function random_range($min, $max) {
+  $rand: random();
+  $random_range: $min + floor($rand * (($max - $min) + 1));
+  @return $random_range;
+} */
 .timeline1{
-  background-position: top center;
+  /* background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("./assets/img/snow_gif.gif");
+  background-image: url("./assets/img/snow_gif.gif"); */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  filter: drop-shadow(0 0 10px white);
 }
+
+.snow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* @keyframes fall {
+  0% {
+    transform: translate(var(--random-x), -10px) scale(var(--random-scale));
+    opacity: var(--random-opacity);
+  }
+  
+  var(--random-yoyo-time)% {
+    transform: translate(var(--random-x-end), var(--random-yoyo-y)) scale(var(--random-scale));
+    opacity: var(--random-opacity);
+  }
+  
+  100% {
+    transform: translate(var(--random-x-end-yoyo), 100vh) scale(var(--random-scale));
+    opacity: var(--random-opacity);
+  }
+} */
+
+/* Generate .snow classes and their animations */
+/* .snow:nth-child(1) {
+  --random-x: calc(1 * 0.0001vw);
+  --random-x-end: calc(var(--random-x) + (var(--random-offset) * 0.0001vw));
+  --random-x-end-yoyo: calc(var(--random-x) + (var(--random-offset) / 2 * 0.0001vw));
+  --random-yoyo-time: calc(var(--random-yoyo-time) / 100000 * 100);
+  --random-yoyo-y: calc(var(--random-yoyo-time) * 100vh);
+  --random-scale: calc(1 * 0.0001);
+  --fall-duration: calc(10 * 1s);
+  --fall-delay: calc(-1 * 1s);
+  --random-opacity: calc(1 * 0.0001);
+  animation: fall var(--fall-duration) var(--fall-delay) linear infinite;
+} */
+
+/* Repeat the above block for .snow:nth-child(2) through .snow:nth-child(200) with adjusted variables */
+
+/* Define random_range function using CSS custom properties */
+/* @function random_range($min, $max) {
+  $rand: random();
+  $random_range: calc(#{$min} + floor(#{$rand} * (#{$max} - #{$min} + 1)));
+  @return $random_range;
+} */
+
 .title1 {
   font-size: 3em;
   padding-top: 50px;

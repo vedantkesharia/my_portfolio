@@ -4,7 +4,7 @@ let timelineElements = [
     title: "School",
     location: "Blossoms S.T. English High School, Mumbai",
     description:
-      "Did my schooling in Blossoms S.T. English High School, Mumbai ",
+      "Did my schooling in Blossoms S.T. English High School, Mumbai. ",
     // buttonText: "View Frontend Projects",
     date: "March 2019",
     icon: "school",
@@ -14,7 +14,7 @@ let timelineElements = [
     title: "Junior College",
     location: "KC College, Mumbai",
     description:
-      "Did my HSC through KC College in Mumbai, MHT-CET:96.81 percentile",
+      "Did my HSC through KC College in Mumbai, MHT-CET:96.81 percentile.",
     // buttonText: "View Backend Projects",
     date: "June 2019 - August 2021",
     icon: "school",
@@ -44,7 +44,7 @@ let timelineElements = [
     title: "Web Development",
     location: "Full Stack Developer",
     description:
-      "Knowledge of Full-stack development with knowledge of languages and frameworks like Javascript, CSS, HTML, ReactJs, NextJs, NodeJs, ExpressJs, TailwindCSS, MaterialUI and databases like MongoDB, MySQL .",
+      "Knowledge of Full-stack development with knowledge of languages and frameworks like Javascript, CSS, HTML, ReactJs, NextJs, NodeJs, ExpressJs, TailwindCSS, MaterialUI and databases like MongoDB, MySQL.",
     buttonText: "My Projects",
     date: "Present",
     icon: "work",
