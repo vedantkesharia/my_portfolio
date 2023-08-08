@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Contact2 from './components/Contact2';
 import Contact3 from './components/Contact3';
+import Timeline from './components/Timeline';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
+      <Timeline/>
       <Projects />
       <Contact3 />
       <Footer />
