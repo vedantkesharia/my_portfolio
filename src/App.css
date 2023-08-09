@@ -253,6 +253,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+.welcome{
+  color:#06d6a0;
+  /* color: linear-gradient(to right, #8B5CF6, #D946EF) !important; */
+  /* -webkit-background-clip: text; */
+}
+
 #container3D canvas {
   /* width: 35% !important;
   height: 35% !important; */
@@ -389,17 +395,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .skill-slider {
   width: 80%;
-  /* width: 3;  */
   margin: 0 auto;
-  /* position: relative; */
-  display: flex;
-  animation: continuousSlide 20s linear infinite;
+  position: relative;
+  /* display: flex;
+  animation: continuousSlide 20s linear infinite; */
 }
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
 
 }
+/* .skill-slider-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+} */
+
+/* .skill-slider-item {
+  flex: 0 0 auto;
+  width: 33.33%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+
 .background-image-left {
   top: 28%;
   position: absolute;
@@ -408,7 +430,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-.carousel-container {
+/* .carousel-container {
   overflow: hidden;
 }
 
@@ -419,7 +441,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 /************ Projects Css ************/
 .project {
@@ -672,7 +694,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer {
   padding: 0 0 50px 0;
   position: relative;
-  background-image: url('./assets/img/footer-bg.png');
+  /* background-image: url('./assets/img/footer-bg.png'); */
+  background: #000000;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
