@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import coding_img from "../assets/img/coder-img.jpg"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Fade from 'react-reveal/Fade';
@@ -136,13 +137,14 @@ const Contact3 = () => {
 
 
   return (
-          <section className="contact" id="connect">
-      <Container>
+          <section className="contact" id="connect" >
+      <Container style={{zIndex:'1'}}>
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img  src={contactImg} alt="Contact Us"/>
+                // <img  src={contactImg} alt="Contact Us"/>
+                <img src={coding_img} alt="image" />
               }
             </TrackVisibility>
           </Col>

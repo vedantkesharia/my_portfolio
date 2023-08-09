@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import headerImg3 from "../assets/img/header5_img.png";
-import globe_img from "../assets/img/globe_img.png"
+import globe_img from "../assets/img/globe_img.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { HashLink } from "react-router-hash-link";
-// import Globe from "react-globe.gl";
 // import Reveal from 'react-reveal/Reveal';
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
 import Fade from "react-reveal/Fade";
+import { Particle } from "./Particle";
 
 // className={isVisible ? "animate__animated animate__fadeIn" : ""} line 70
 // className={isVisible ? "animate__animated animate__zoomIn" : ""} line 90
@@ -23,6 +25,185 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = ["Web Developer", "Frontend Developer", "Backend Developer"];
   const period = 2000;
+
+
+const options1 = {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.2,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 20,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 300,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 2
+      },
+      "move": {
+        "enable": true,
+        "speed": 12,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 800,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 800,
+          "size": 80,
+          "duration": 2,
+          "opacity": 0.8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 400,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+}
+
+  const options = {
+    particles: {
+      number: {
+        value: 80,
+        density: {
+          enable: true,
+          area: 800,
+        },
+      },
+      color: {
+        // value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"],
+        value:'#fff',
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.4,
+      },
+      size: {
+        value: { min: 1, max: 4 },
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#808080",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 2.5,
+        direction: "none",
+        random: false,
+        straight: false,
+        outModes: "out",
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "grab",
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          links: {
+            opacity: 1,
+          },
+        },
+        push: {
+          quantity: 4,
+        },
+      },
+    },
+  };
+
+  const particlesInit = async (engine) => {
+    await loadFull(engine);
+  };
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -68,16 +249,39 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
+      
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div>
+                <div >
+                  {/* <Particles
+                    options={options}
+                    init={particlesInit}
+                    style={{
+                      position: "relative",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      zIndex: "-1",
+                      filter: "blur(1.5px)" 
+                    }}
+                  /> */}
                   <Fade left cascade>
-                    <span className="tagline">Welcome to my Portfolio!</span>
-                    <h1>
-                      {`Hi! I'm Vedant`}{" "}
+                    {/* <span className="tagline">Welcome to my Portfolio!</span> */}
+                    <span
+                      style={{
+                        color: "violet",
+                        fontSize: "20px",
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html: "&lt;h1&gt;Welcome to my Portfolio!&lt;/h1&gt;",
+                      }}
+                    ></span>
+                    <h1 style={{zIndex:'100 !important'}}>
+                     {`Hi! I'm Vedant I'm a`}{" "}
                       <span
                         className="txt-rotate"
                         data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
@@ -104,9 +308,23 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div>
-                  {/* <img src={headerImg} alt="Header Img"/> */}
-                  <img src={globe_img} alt="Header Img"/>
+                <div >
+                  <Particles
+                    options={options}
+                    init={particlesInit}
+                    style={{
+                      position: "relative",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      zIndex: "-100",
+                      filter: "blur(2.5px)" 
+                    }}
+                  />
+                  <img src={globe_img} alt="Header Img" />
+                  {/* {isVisible && create3DScene("container3D", "earth")} */}
+                  {/* {start3DRendering()} */}
                 </div>
               )}
             </TrackVisibility>
