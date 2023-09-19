@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import headerImg3 from "../assets/img/header5_img.png";
 import globe_img from "../assets/img/globe_img.png";
+import robot_img from "../assets/img/robot-removebg.png"
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -155,7 +156,7 @@ export const Banner = () => {
         type: "circle",
       },
       opacity: {
-        value: 0.4,
+        value: 0.5,
       },
       size: {
         value: { min: 1, max: 4 },
@@ -163,8 +164,9 @@ export const Banner = () => {
       links: {
         enable: true,
         distance: 150,
-        color: "#808080",
-        opacity: 0.4,
+        // color:'808080',
+        color: "#fff",
+        opacity: 0.8,
         width: 1,
       },
       move: {
@@ -245,7 +247,7 @@ export const Banner = () => {
 
   const handleScrollToConnect = () => {
     window.location.href =
-      "https://drive.google.com/file/d/1H1T-DnWj3jdeGzY0ElCF7_gHhynl3i5H/view?usp=sharing";
+      "https://drive.google.com/file/d/1QPstg4LWxjajWSjbC8-2T8FOj-MZ3KxH/view?usp=sharing";
   };
 
   return (
@@ -323,7 +325,7 @@ export const Banner = () => {
                       filter: "blur(2.5px)" 
                     }}
                   />
-                  <img src={globe_img} alt="Header Img" />
+                  <img src={robot_img} alt="Header Img" className="robot"/>
                   {/* {isVisible && create3DScene("container3D", "earth")} */}
                   {/* {start3DRendering()} */}
                 </div>

@@ -19,6 +19,7 @@ import flexibble_img from "../assets/img/flexibble_img.jpeg"
 import blognest_img from "../assets/img/blognest_img.jpeg"
 import iphone_site_img from "../assets/img/iphone_site_img.jpeg"
 import brainai_img from "../assets/img/brainai_img.jpeg"
+import codesync_img from "../assets/img/codesync_img.jpg"
 import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Reveal';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -52,15 +53,15 @@ export const Projects = () => {
     },
     {
       title: "VideoVerse",
-      description: " Youtube clone using API fetching with video search play functionality using ReactJs, Material UI",
+      description: "Youtube clone using API fetching with video search play functionality using ReactJs, Material UI",
       imgUrl: videoverse_img,
       projecturl:'http://thevideoverse.netlify.app/'
     },
     {
-      title: "vChat",
-      description: "A real time chatting application using ReactJs, CSS, HTML, Firebase",
-      imgUrl: vchat_img,
-      projecturl:'https://github.com/vedantkesharia/vchat/tree/master'
+      title: "CodeSync",
+      description: "A code sharing web application where users can save and share their code snippets using NextJs, TailwindCSS, MongoDB, NodeJS",
+      imgUrl: codesync_img,
+      projecturl:'https://codesyncweb.vercel.app/'
     },
     {
       title: "BrainAI",
@@ -99,10 +100,10 @@ export const Projects = () => {
       projecturl:"http://iphonelandingsite.netlify.app/"
     },
     {
-      title: "Todo List",
-      description: "A web application to keep a track of your daily tasks Tech : ReactJS, HTML, CSS, javascript",
-      imgUrl: todo_img,
-      projecturl:"https://github.com/vedantkesharia/Todo-App/tree/master"
+      title: "vChat",
+      description: "A real time chatting application using ReactJs, CSS, HTML, Firebase",
+      imgUrl: vchat_img,
+      projecturl:'https://github.com/vedantkesharia/vchat/tree/master'
     },
     {
       title: "NewsToday",

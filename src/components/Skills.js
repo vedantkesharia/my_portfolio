@@ -61,6 +61,7 @@ export const Skills = () => {
                   infinite={true}
                   autoPlay={true}
                   autoPlaySpeed={3000}
+                  // autoPlaySpeed={900}
                   // customTransition="transform 20s linear infinite"
                   // containerClass="skill-slider-container"
                   // itemClass="skill-slider-item"

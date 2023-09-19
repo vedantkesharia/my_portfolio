@@ -49,15 +49,15 @@ let timelineElements = [
     date: "Present",
     icon: "work",
   },
-  // {
-  //   id: 6,
-  //   title: "Marble Hills Grammar School",
-  //   location: "Dragontail, Ascana",
-  //   description:
-  //     "Highschool - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-  //   date: "2003 - 2007",
-  //   icon: "school",
-  // },
+  {
+    id: 6,
+    title: "Technical Head",
+    location: "DJ Init.AI",
+    description:
+      "Currently Technical Head at DJ Init.AI which is an AI/ML research club of IT department, responsible for maintaining and updating website.",
+    date: "Present",
+    icon: "work",
+  },
 ];
 
 export default timelineElements;

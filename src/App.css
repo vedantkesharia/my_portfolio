@@ -253,6 +253,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+
+
+  /* @media (max-width:600px){
+    .robot{
+     !important;
+    }
+  } */
+
 .welcome{
   color:#06d6a0;
   /* color: linear-gradient(to right, #8B5CF6, #D946EF) !important; */
@@ -276,7 +284,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background-image: url('./assets/img/banner-bg.png'); */
   /* background-image: url('./assets/img/space_gif1.gif'); */
   /* background-image: url('./assets/img/snow_gif.gif'); */
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  /* background: rgb(29, 28, 28); */
+  /* background:radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
+  /* background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);  */
+  /* background: radial-gradient(circle at 100% 100%, rgba(202, 202, 202, 0.8) 0%, transparent 35%);*/
+  background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%); 
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -333,9 +346,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner img {
     animation: updown 3s linear infinite;
     margin-top: -45px;
-    margin-left: -40px;
-    height: 130%;
-    width:130%;
+    /* margin-left: -40px; */
+    height:500px !important;
+    width:350px !important;
+    margin-left: 18% !important;
   }
 }
 
@@ -346,6 +360,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 140%;
+    margin-left: 0% 
   }
   .contact img {
     width: 92%;
@@ -828,6 +843,7 @@ span.project-text2 {
   background-repeat: no-repeat;
   background-image: url("./assets/img/snow_gif.gif"); */
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* background: #000; */
   overflow: hidden;
   filter: drop-shadow(0 0 10px white);
 }
