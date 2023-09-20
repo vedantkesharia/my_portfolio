@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,Suspense } from "react";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import Atom from "./Cube";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
 import headerImg3 from "../assets/img/header5_img.png";
 import globe_img from "../assets/img/globe_img.png";
-import robot_img from "../assets/img/robot-removebg.png"
+import robot_img from "../assets/img/robot-removebg.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -13,6 +16,7 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import Fade from "react-reveal/Fade";
 import { Particle } from "./Particle";
+import Cube from "./Cube";
 
 // className={isVisible ? "animate__animated animate__fadeIn" : ""} line 70
 // className={isVisible ? "animate__animated animate__zoomIn" : ""} line 90
@@ -27,122 +31,121 @@ export const Banner = () => {
   const toRotate = ["Web Developer", "Frontend Developer", "Backend Developer"];
   const period = 2000;
 
-
-// const options1 = {
-//     "particles": {
-//       "number": {
-//         "value": 80,
-//         "density": {
-//           "enable": true,
-//           "value_area": 800
-//         }
-//       },
-//       "color": {
-//         "value": "#ffffff"
-//       },
-//       "shape": {
-//         "type": "circle",
-//         "stroke": {
-//           "width": 0,
-//           "color": "#000000"
-//         },
-//         "polygon": {
-//           "nb_sides": 5
-//         },
-//         "image": {
-//           "src": "img/github.svg",
-//           "width": 100,
-//           "height": 100
-//         }
-//       },
-//       "opacity": {
-//         "value": 0.2,
-//         "random": false,
-//         "anim": {
-//           "enable": false,
-//           "speed": 1,
-//           "opacity_min": 0.1,
-//           "sync": false
-//         }
-//       },
-//       "size": {
-//         "value": 5,
-//         "random": true,
-//         "anim": {
-//           "enable": false,
-//           "speed": 20,
-//           "size_min": 0.1,
-//           "sync": false
-//         }
-//       },
-//       "line_linked": {
-//         "enable": true,
-//         "distance": 300,
-//         "color": "#ffffff",
-//         "opacity": 0.4,
-//         "width": 2
-//       },
-//       "move": {
-//         "enable": true,
-//         "speed": 12,
-//         "direction": "none",
-//         "random": false,
-//         "straight": false,
-//         "out_mode": "out",
-//         "bounce": false,
-//         "attract": {
-//           "enable": false,
-//           "rotateX": 600,
-//           "rotateY": 1200
-//         }
-//       }
-//     },
-//     "interactivity": {
-//       "detect_on": "canvas",
-//       "events": {
-//         "onhover": {
-//           "enable": false,
-//           "mode": "grab"
-//         },
-//         "onclick": {
-//           "enable": true,
-//           "mode": "grab"
-//         },
-//         "resize": true
-//       },
-//       "modes": {
-//         "grab": {
-//           "distance": 800,
-//           "line_linked": {
-//             "opacity": 1
-//           }
-//         },
-//         "bubble": {
-//           "distance": 800,
-//           "size": 80,
-//           "duration": 2,
-//           "opacity": 0.8,
-//           "speed": 3
-//         },
-//         "repulse": {
-//           "distance": 400,
-//           "duration": 0.4
-//         },
-//         "push": {
-//           "particles_nb": 4
-//         },
-//         "remove": {
-//           "particles_nb": 2
-//         }
-//       }
-//     },
-//     "retina_detect": true
-// }
+  // const options1 = {
+  //     "particles": {
+  //       "number": {
+  //         "value": 80,
+  //         "density": {
+  //           "enable": true,
+  //           "value_area": 800
+  //         }
+  //       },
+  //       "color": {
+  //         "value": "#ffffff"
+  //       },
+  //       "shape": {
+  //         "type": "circle",
+  //         "stroke": {
+  //           "width": 0,
+  //           "color": "#000000"
+  //         },
+  //         "polygon": {
+  //           "nb_sides": 5
+  //         },
+  //         "image": {
+  //           "src": "img/github.svg",
+  //           "width": 100,
+  //           "height": 100
+  //         }
+  //       },
+  //       "opacity": {
+  //         "value": 0.2,
+  //         "random": false,
+  //         "anim": {
+  //           "enable": false,
+  //           "speed": 1,
+  //           "opacity_min": 0.1,
+  //           "sync": false
+  //         }
+  //       },
+  //       "size": {
+  //         "value": 5,
+  //         "random": true,
+  //         "anim": {
+  //           "enable": false,
+  //           "speed": 20,
+  //           "size_min": 0.1,
+  //           "sync": false
+  //         }
+  //       },
+  //       "line_linked": {
+  //         "enable": true,
+  //         "distance": 300,
+  //         "color": "#ffffff",
+  //         "opacity": 0.4,
+  //         "width": 2
+  //       },
+  //       "move": {
+  //         "enable": true,
+  //         "speed": 12,
+  //         "direction": "none",
+  //         "random": false,
+  //         "straight": false,
+  //         "out_mode": "out",
+  //         "bounce": false,
+  //         "attract": {
+  //           "enable": false,
+  //           "rotateX": 600,
+  //           "rotateY": 1200
+  //         }
+  //       }
+  //     },
+  //     "interactivity": {
+  //       "detect_on": "canvas",
+  //       "events": {
+  //         "onhover": {
+  //           "enable": false,
+  //           "mode": "grab"
+  //         },
+  //         "onclick": {
+  //           "enable": true,
+  //           "mode": "grab"
+  //         },
+  //         "resize": true
+  //       },
+  //       "modes": {
+  //         "grab": {
+  //           "distance": 800,
+  //           "line_linked": {
+  //             "opacity": 1
+  //           }
+  //         },
+  //         "bubble": {
+  //           "distance": 800,
+  //           "size": 80,
+  //           "duration": 2,
+  //           "opacity": 0.8,
+  //           "speed": 3
+  //         },
+  //         "repulse": {
+  //           "distance": 400,
+  //           "duration": 0.4
+  //         },
+  //         "push": {
+  //           "particles_nb": 4
+  //         },
+  //         "remove": {
+  //           "particles_nb": 2
+  //         }
+  //       }
+  //     },
+  //     "retina_detect": true
+  // }
 
   const options = {
     particles: {
       number: {
-        value: 60,
+        value: 48,
         density: {
           enable: true,
           area: 800,
@@ -150,29 +153,32 @@ export const Banner = () => {
       },
       color: {
         // value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"],
-        value:'#fff',
+        value: "fff",
       },
       shape: {
         type: "circle",
       },
       opacity: {
-        value: 0.5,
+        value: 0.9,
       },
       size: {
-        value: { min: 1, max: 4 },
+        value: { min: 1, max: 2.5 },
+      },
+      blur: {
+        value: 0, // Set blur value to 0 to make the stars sharp
       },
       links: {
         enable: true,
-        distance: 150,
+        distance: 125,
         // color:'808080',
         color: "#fff",
-        opacity: 0.8,
+        opacity: 0.7,
         width: 1,
       },
       move: {
-        enable: true,
-        speed: 2.5,
-        direction: "none",
+        enable: false,
+        speed: 1.2,
+        direction: "diagonal",
         random: false,
         straight: false,
         outModes: "out",
@@ -181,7 +187,7 @@ export const Banner = () => {
     interactivity: {
       events: {
         onHover: {
-          enable: true,
+          enable: false,
           mode: "grab",
         },
         onClick: {
@@ -191,14 +197,14 @@ export const Banner = () => {
       },
       modes: {
         grab: {
-          distance: 220,
+          distance: 180,
           links: {
             opacity: 1,
           },
         },
         push: {
           quantity: 1,
-          size:2,
+          size: 2,
         },
       },
     },
@@ -252,13 +258,12 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
-      
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div >
+                <div>
                   {/* <Particles
                     options={options}
                     init={particlesInit}
@@ -274,7 +279,8 @@ export const Banner = () => {
                   /> */}
                   <Fade left cascade>
                     {/* <span className="tagline">Welcome to my Portfolio!</span> */}
-                    <span className="welcome"
+                    <span
+                      className="welcome"
                       style={{
                         // color: "",
                         fontSize: "20px",
@@ -283,8 +289,8 @@ export const Banner = () => {
                         __html: "&lt;h1&gt;Welcome to my Portfolio!&lt;/h1&gt;",
                       }}
                     ></span>
-                    <h1 style={{zIndex:'100 !important'}}>
-                     {`Hi! I'm Vedant I'm a`}{" "}
+                    <h1 style={{ zIndex: "100 !important" }}>
+                      {`Hi! I'm Vedant I'm a`}{" "}
                       <span
                         className="txt-rotate"
                         data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
@@ -292,7 +298,7 @@ export const Banner = () => {
                         <span className="wrap">{text}</span>
                       </span>
                     </h1>
-                    <p>
+                    <p style={{ fontWeight: "bolder", fontStyle: "italic",boxShadow:'2px' }}>
                       Hi! I am Vedant Kesharia,I am a FullStack Web Developer,
                       This is my portfolio website, I hope you like this website
                       and my projects!
@@ -311,7 +317,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div >
+                <div>
                   <Particles
                     options={options}
                     init={particlesInit}
@@ -322,12 +328,18 @@ export const Banner = () => {
                       width: "100%",
                       height: "100%",
                       zIndex: "-100",
-                      filter: "blur(2.5px)" 
+                      // filter: "blur(2.5px)"
                     }}
                   />
-                  <img src={robot_img} alt="Header Img" className="robot"/>
+                  {/* <img src={robot_img} alt="Header Img" className="robot"/> */}
                   {/* {isVisible && create3DScene("container3D", "earth")} */}
                   {/* {start3DRendering()} */}
+                  <Canvas camera={{ position: [0, 0, 10] }} style={{ width: "530px", height: "580px" }} className="three_model">
+                    <Suspense fallback={null}>
+                      <Cube />
+                      <OrbitControls enableZoom={false} autoRotate />
+                    </Suspense>
+                  </Canvas>
                 </div>
               )}
             </TrackVisibility>

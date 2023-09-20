@@ -101,6 +101,7 @@ nav.navbar {
   position: fixed;
   width: 100%;
   top: 0;
+  left:0 !important;
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
@@ -279,7 +280,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .banner {
-  margin-top: 0;
+  margin-top: -42px;
   padding: 260px 0 100px 0;
   /* background-image: url('./assets/img/banner-bg.png'); */
   /* background-image: url('./assets/img/space_gif1.gif'); */
@@ -287,9 +288,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
   /* background: rgb(29, 28, 28); */
   /* background:radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
-  /* background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);  */
+  background: radial-gradient(circle at 30% 50%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%); 
   /* background: radial-gradient(circle at 100% 100%, rgba(202, 202, 202, 0.8) 0%, transparent 35%);*/
-  background: radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%); 
+  /* background: radial-gradient(circle at 100% 0%, rgba(224, 224, 224, 0.8) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%); 
+  background: radial-gradient(circle at 100% 0%, rgba(164, 164, 164, 0.8) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%);  */
+  background-image: linear-gradient(to right, #031127, #07102c, #0f0d30, #180933, #230333);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -351,7 +354,59 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width:350px !important;
     margin-left: 18% !important;
   }
+  .three_model{
+    /* animation: updown 3s linear infinite; */
+    margin-top: -170px;
+    margin-left: -70px;
+    height:500%;
+    /* width:1200px ; */
+    /* margin-left: 18% !important; */
+  }
 }
+
+
+@media (width: 820px) {
+  .banner img {
+    animation: updown 3s linear infinite;
+    margin-top: -45px;
+    /* margin-left: -40px; */
+    height:500px !important;
+    width:350px !important;
+    margin-left: 18% !important;
+  }
+  .three_model{
+    /* animation: updown 3s linear infinite; */
+    margin-top: -170px;
+    margin-left: -82px;
+    height:500%;
+    width:1200px ;
+    right:8%;
+    /* margin-left: 18% !important; */
+  }
+}
+
+
+
+@media (width: 768px) {
+  .banner img {
+    animation: updown 3s linear infinite;
+    margin-top: -45px;
+    /* margin-left: -40px; */
+    height:500px !important;
+    width:350px !important;
+    margin-left: 18% !important;
+  }
+  .three_model{
+    /* animation: updown 3s linear infinite; */
+    margin-top: -170px;
+    margin-left: -82px;
+    height:500%;
+    width:1200px ;
+    right:8%;
+    /* margin-left: 18% !important; */
+  }
+}
+
 
 @media (max-width: 767px) {
   .banner img {
@@ -360,7 +415,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 140%;
-    margin-left: 0% 
+    margin-left: 0% ;
+  }
+  .three_model{
+    margin-top: -60px;
+    margin-bottom: -60px;
+    height: 155%;
+    max-width: 100%; 
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
   }
   .contact img {
     width: 92%;
@@ -420,20 +483,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto 15px auto;
 
 }
-/* .skill-slider-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  justify-content: center;
-} */
 
-/* .skill-slider-item {
-  flex: 0 0 auto;
-  width: 33.33%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 
 
@@ -842,7 +892,9 @@ span.project-text2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("./assets/img/snow_gif.gif"); */
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+  /* background-image: linear-gradient(to bottom, #232222, #1e1d1d, #181818, #131313, #0c0c0c, #0e0e0f, #111011, #131213, #1b1b1c, #222425, #2a2d2e, #323636); */
+  background-image: linear-gradient(to bottom, #232222, #1e1d1d, #181818, #131313, #0c0c0c, #0c0c0c, #0c0c0c, #0c0c0c, #131313, #181818, #1e1d1d, #232222);
   /* background: #000; */
   overflow: hidden;
   filter: drop-shadow(0 0 10px white);
