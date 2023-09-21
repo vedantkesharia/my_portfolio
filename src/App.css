@@ -278,6 +278,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 1000;
 }
 
+.blur{
+  position: absolute;
+  box-shadow: 0 0 1000px 50px #1d4ed8;
+}
 
 .banner {
   margin-top: -42px;
@@ -288,11 +292,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
   /* background: rgb(29, 28, 28); */
   /* background:radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%); */
-  background: radial-gradient(circle at 30% 50%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%); 
+  /* black grad */
+  /* background: radial-gradient(circle at 30% 50%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);  */
   /* background: radial-gradient(circle at 100% 100%, rgba(202, 202, 202, 0.8) 0%, transparent 35%);*/
   /* background: radial-gradient(circle at 100% 0%, rgba(224, 224, 224, 0.8) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%); 
   background: radial-gradient(circle at 100% 0%, rgba(164, 164, 164, 0.8) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%);  */
-  background-image: linear-gradient(to right, #031127, #07102c, #0f0d30, #180933, #230333);
+  /* blue grad */
+  /* background-image: linear-gradient(to right, #031127, #07102c, #0f0d30, #180933, #230333); */
+  background-color: #18181B;
+  background-color: #08081c;
+  /* background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  );
+  */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -357,10 +371,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .three_model{
     /* animation: updown 3s linear infinite; */
     margin-top: -170px;
-    margin-left: -70px;
+    /* margin-left: -70px; */
     height:500%;
     /* width:1200px ; */
     /* margin-left: 18% !important; */
+  }
+  .earth_canvas{
+    height:375px !important;
+    width:375px !important;
+    margin-left: 28px;
+    margin-top: -40px;
   }
 }
 
@@ -383,6 +403,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     right:8%;
     /* margin-left: 18% !important; */
   }
+
 }
 
 
@@ -424,6 +445,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     max-width: 100%; 
   margin-left: auto; /* Center horizontally */
   margin-right: auto; /* Center horizontally */
+  }
+  .earth_canvas{
+    height:250px !important;
+    width:250px !important;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .contact img {
     width: 92%;

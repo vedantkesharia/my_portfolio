@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { Suspense, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
@@ -7,6 +7,9 @@ import coding_img from "../assets/img/coder-img.jpg"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Fade from 'react-reveal/Fade';
+import Cube from './Cube';
+import { Canvas } from 'react-three-fiber';
+import { OrbitControls } from '@react-three/drei';
 // import 'dotenv/config'
 //className={isVisible ? "animate__animated animate__zoomIn" : ""} line 54
 //className={isVisible ? "animate__animated animate__fadeIn" : ""} line 64
@@ -144,7 +147,13 @@ const Contact3 = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 // <img  src={contactImg} alt="Contact Us"/>
-                <img src={coding_img} alt="image" />
+                // <img src={coding_img} alt="image" />
+                <Canvas camera={{ position: [0, 0, 10] }} style={{ width: "530px", height: "580px" }} className="three_model">
+                    <Suspense fallback={null}>
+                      <Cube />
+                      <OrbitControls enableZoom={false} autoRotate />
+                    </Suspense>
+                  </Canvas>
               }
             </TrackVisibility>
           </Col>

@@ -17,6 +17,8 @@ import { loadFull } from "tsparticles";
 import Fade from "react-reveal/Fade";
 import { Particle } from "./Particle";
 import Cube from "./Cube";
+import EarthCanvas from "./Earth";
+import Snowfall from "react-snowfall";
 
 // className={isVisible ? "animate__animated animate__fadeIn" : ""} line 70
 // className={isVisible ? "animate__animated animate__zoomIn" : ""} line 90
@@ -162,7 +164,7 @@ export const Banner = () => {
         value: 0.9,
       },
       size: {
-        value: { min: 1, max: 2.5 },
+        value: { min: 0.8, max: 2.5 },
       },
       blur: {
         value: 0, // Set blur value to 0 to make the stars sharp
@@ -259,6 +261,7 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
+        {/* <Snowfall/> */}
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
@@ -289,6 +292,7 @@ export const Banner = () => {
                         __html: "&lt;h1&gt;Welcome to my Portfolio!&lt;/h1&gt;",
                       }}
                     ></span>
+                    
                     <h1 style={{ zIndex: "100 !important" }}>
                       {`Hi! I'm Vedant I'm a`}{" "}
                       <span
@@ -296,8 +300,11 @@ export const Banner = () => {
                         data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
                       >
                         <span className="wrap">{text}</span>
+                       
                       </span>
                     </h1>
+                      {/* <span className="blur"></span>
+                    <span className="blur"></span> */}
                     <p style={{ fontWeight: "bolder", fontStyle: "italic",boxShadow:'2px' }}>
                       Hi! I am Vedant Kesharia,I am a FullStack Web Developer,
                       This is my portfolio website, I hope you like this website
@@ -318,10 +325,11 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div>
-                  <Particles
+                  {/* <Particles
                     options={options}
                     init={particlesInit}
                     style={{
+                      position: "relative",
                       position: "relative",
                       top: 0,
                       left: 0,
@@ -330,16 +338,19 @@ export const Banner = () => {
                       zIndex: "-100",
                       // filter: "blur(2.5px)"
                     }}
-                  />
+                  /> */}
                   {/* <img src={robot_img} alt="Header Img" className="robot"/> */}
                   {/* {isVisible && create3DScene("container3D", "earth")} */}
                   {/* {start3DRendering()} */}
-                  <Canvas camera={{ position: [0, 0, 10] }} style={{ width: "530px", height: "580px" }} className="three_model">
+                  {/* <Canvas camera={{ position: [0, 0, 10] }} style={{ width: "530px", height: "580px" }} className="three_model">
                     <Suspense fallback={null}>
                       <Cube />
                       <OrbitControls enableZoom={false} autoRotate />
                     </Suspense>
-                  </Canvas>
+                  </Canvas> */}
+
+                  <EarthCanvas className="three_model"/>
+              
                 </div>
               )}
             </TrackVisibility>
