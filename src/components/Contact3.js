@@ -148,13 +148,13 @@ const Contact3 = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 // <img  src={contactImg} alt="Contact Us"/>
-                // <img src={coding_img} alt="image" />
-                <Canvas camera={{ position: [0, 0, 10] }} style={{ width: "530px", height: "580px" }} className="three_model">
-                    <Suspense fallback={null}>
-                      <Cube />
-                      <OrbitControls enableZoom={false} autoRotate />
-                    </Suspense>
-                  </Canvas>
+                <img src={coding_img} alt="image" />
+                // <Canvas camera={{ position: [0, 0, 10] }} style={{ width: "530px", height: "580px" }} className="three_model">
+                //     <Suspense fallback={null}>
+                //       <Cube />
+                //       <OrbitControls enableZoom={false} autoRotate />
+                //     </Suspense>
+                //   </Canvas>
               }
             </TrackVisibility>
           </Col>
