@@ -75,14 +75,14 @@ export const Skills = () => {
                     <img src={nextImg} alt="Image" />
                     <h5>NextJs</h5>
                   </div>
-                  <div className="item">
-                    <img src={nodetImg} style={{marginTop:"-2%",marginLeft:'-4%'}} alt="Image" />
+                  <div className="item" style={{marginLeft:'-8%'}}>
+                    <img src={nodetImg} style={{marginTop:"-2%"}} alt="Image" />
                     <h5 style={{marginTop:"-9%",marginLeft:'-4%'}}>NodeJs</h5>
                   </div>
                   <div className="item">
                     <img
                       src={expressImg}
-                      style={{ marginTop: "10px",height:'140%',width:'130%',margin:'auto',marginLeft:'-16%' }}
+                      style={{ marginTop: "10px",height:'140%',width:'130%',margin:'auto',marginLeft:'-12%' }}
                       alt="Image"
                     />
                     <h5>ExpressJs</h5>

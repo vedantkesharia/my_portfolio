@@ -149,8 +149,9 @@ export const Banner = () => {
       number: {
         value: 48,
         density: {
-          enable: true,
-          area: 800,
+          snable:false
+          // enable: true,
+          // area: 800,
         },
       },
       color: {
@@ -158,10 +159,20 @@ export const Banner = () => {
         value: "fff",
       },
       shape: {
-        type: "circle",
+        type: "star",
       },
+      // opacity: {
+      //   value: 0.9,
+      // },
       opacity: {
         value: 0.9,
+        random: true, // Enable random opacity for twinkling effect
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false,
+        },
       },
       size: {
         value: { min: 0.8, max: 2.5 },
@@ -170,7 +181,7 @@ export const Banner = () => {
         value: 0, // Set blur value to 0 to make the stars sharp
       },
       links: {
-        enable: true,
+        enable: false,
         distance: 125,
         // color:'808080',
         color: "#fff",
@@ -180,7 +191,7 @@ export const Banner = () => {
       move: {
         enable: false,
         speed: 1.2,
-        direction: "diagonal",
+        direction: "random",
         random: false,
         straight: false,
         outModes: "out",
@@ -206,7 +217,7 @@ export const Banner = () => {
         },
         push: {
           quantity: 1,
-          size: 2,
+          size: 1.5,
         },
       },
     },
@@ -325,7 +336,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div>
-                  {/* <Particles
+                  <Particles
                     options={options}
                     init={particlesInit}
                     style={{
@@ -338,7 +349,7 @@ export const Banner = () => {
                       zIndex: "-100",
                       // filter: "blur(2.5px)"
                     }}
-                  /> */}
+                  />
                   {/* <img src={robot_img} alt="Header Img" className="robot"/> */}
                   {/* {isVisible && create3DScene("container3D", "earth")} */}
                   {/* {start3DRendering()} */}
