@@ -266,7 +266,7 @@ export const Banner = () => {
 
   const handleScrollToConnect = () => {
     window.location.href =
-      "https://drive.google.com/file/d/1QPstg4LWxjajWSjbC8-2T8FOj-MZ3KxH/view?usp=sharing";
+      "https://drive.google.com/file/d/1OCQYXyMQtGJ4SBBattOyTz08eV2QlEzu/view?usp=sharing";
   };
 
   return (
