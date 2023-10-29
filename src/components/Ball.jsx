@@ -10,6 +10,7 @@ import {
 
 import CanvasLoader from "./CanvasLoader";
 
+
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
@@ -36,6 +37,7 @@ const Ball = (props) => {
     </Float>
   );
 };
+
 
 const BallCanvas = ({ icon }) => {
   return (
