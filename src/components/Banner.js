@@ -144,12 +144,92 @@ export const Banner = () => {
   //     "retina_detect": true
   // }
 
+  // const options = {
+  //   particles: {
+  //     number: {
+  //       value: 48,
+  //       density: {
+  //         snable:false
+  //         // enable: true,
+  //         // area: 800,
+  //       },
+  //     },
+  //     color: {
+  //       // value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"],
+  //       value: "fff",
+  //     },
+  //     shape: {
+  //       type: "star",
+  //     },
+  //     // opacity: {
+  //     //   value: 0.9,
+  //     // },
+  //     opacity: {
+  //       value: 0.9,
+  //       random: true, // Enable random opacity for twinkling effect
+  //       anim: {
+  //         enable: true,
+  //         speed: 1,
+  //         opacity_min: 0.1,
+  //         sync: false,
+  //       },
+  //     },
+  //     size: {
+  //       value: { min: 0.8, max: 2.5 },
+  //     },
+  //     blur: {
+  //       value: 0, // Set blur value to 0 to make the stars sharp
+  //     },
+  //     links: {
+  //       enable: false,
+  //       distance: 125,
+  //       // color:'808080',
+  //       color: "#fff",
+  //       opacity: 0.7,
+  //       width: 1,
+  //     },
+  //     move: {
+  //       enable: false,
+  //       speed: 1.2,
+  //       direction: "random",
+  //       random: false,
+  //       straight: false,
+  //       outModes: "out",
+  //     },
+  //   },
+  //   interactivity: {
+  //     events: {
+  //       onHover: {
+  //         enable: false,
+  //         mode: "grab",
+  //       },
+  //       onClick: {
+  //         enable: true,
+  //         mode: "push",
+  //       },
+  //     },
+  //     modes: {
+  //       grab: {
+  //         distance: 180,
+  //         links: {
+  //           opacity: 1,
+  //         },
+  //       },
+  //       push: {
+  //         quantity: 1,
+  //         size: 1.5,
+  //       },
+  //     },
+  //   },
+  // };
+
   const options = {
     particles: {
       number: {
-        value: 48,
+        // value: 48,
+        value: 60,
         density: {
-          snable:false
+          snable: false,
           // enable: true,
           // area: 800,
         },
@@ -159,7 +239,7 @@ export const Banner = () => {
         value: "fff",
       },
       shape: {
-        type: "star",
+        type: "circle",
       },
       // opacity: {
       //   value: 0.9,
@@ -178,7 +258,7 @@ export const Banner = () => {
         value: { min: 0.8, max: 2.5 },
       },
       blur: {
-        value: 0, // Set blur value to 0 to make the stars sharp
+        value: 0,
       },
       links: {
         enable: false,
@@ -190,7 +270,7 @@ export const Banner = () => {
       },
       move: {
         enable: false,
-        speed: 1.2,
+        speed: 0.8,
         direction: "random",
         random: false,
         straight: false,
@@ -200,11 +280,11 @@ export const Banner = () => {
     interactivity: {
       events: {
         onHover: {
-          enable: false,
-          mode: "grab",
+          enable: true,
+          mode: "bubble",
         },
         onClick: {
-          enable: true,
+          enable: false,
           mode: "push",
         },
       },
@@ -215,6 +295,13 @@ export const Banner = () => {
             opacity: 1,
           },
         },
+        bubble: {
+          distance: 500,
+          size: 0,
+          duration: 2,
+          opacity: 0,
+          speed: 5,
+        },
         push: {
           quantity: 1,
           size: 1.5,
@@ -222,6 +309,7 @@ export const Banner = () => {
       },
     },
   };
+
 
   const particlesInit = async (engine) => {
     await loadFull(engine);
@@ -266,7 +354,7 @@ export const Banner = () => {
 
   const handleScrollToConnect = () => {
     window.location.href =
-      "https://drive.google.com/file/d/1uS2IkNPMrDwtuad97QWH9OLfC7_z2aDc/view?usp=sharing";
+      "https://drive.google.com/file/d/16JO7SgiUEpnI5208Y4dd8AQHyEZ1tJhy/view?usp=sharing";
   };
 
   return (
