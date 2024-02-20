@@ -14,7 +14,7 @@ import { HashLink } from "react-router-hash-link";
 // import Reveal from 'react-reveal/Reveal';
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import Fade from "react-reveal/Fade";
+import {Fade} from "react-awesome-reveal";
 import { Particle } from "./Particle";
 import Cube from "./Cube";
 import EarthCanvas from "./Earth";
@@ -379,7 +379,8 @@ export const Banner = () => {
                       filter: "blur(1.5px)" 
                     }}
                   /> */}
-                  <Fade left cascade>
+                  {/* <Fade left cascade duration={600}> */}
+                  <Fade delay={120} cascade damping={0.5}>
                     {/* <span className="tagline">Welcome to my Portfolio!</span> */}
                     <span
                       className="welcome"
@@ -391,7 +392,7 @@ export const Banner = () => {
                         __html: "&lt;h1&gt;Welcome to my Portfolio!&lt;/h1&gt;",
                       }}
                     ></span>
-                    
+
                     <h1 style={{ zIndex: "100 !important" }}>
                       {`Hi! I'm Vedant I'm a`}{" "}
                       <span
