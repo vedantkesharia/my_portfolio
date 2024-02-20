@@ -127,9 +127,9 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <Fade left cascade>
+                <Fade left>
                 <h2>Projects</h2>
-                <p>Here is a list of my projects with images and description of each project.These projects include some of my Frontend as well as FullStack projects.</p>
+                <p>Here is a list of my projects with images, description and live links of each project.These projects include some of my Frontend as well as FullStack projects.</p>
                 </Fade>
 
                 <Fade left >

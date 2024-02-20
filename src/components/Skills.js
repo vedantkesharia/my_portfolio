@@ -44,7 +44,7 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow">
-              <Fade left cascade>
+              <Fade left>
                 <h2>Skills</h2>
                 <p>
                   My Skill set includes knowledge of Frontend languages and
