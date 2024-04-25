@@ -20,6 +20,7 @@ import blognest_img from "../assets/img/blognest_img.jpeg"
 import iphone_site_img from "../assets/img/iphone_site_img.jpeg"
 import brainai_img from "../assets/img/brainai_img.jpeg"
 import codesync_img from "../assets/img/codesync_img.jpg"
+import codelockr_img from "../assets/img/codelockr_img.jpg"
 import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Reveal';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -67,9 +68,9 @@ export const Projects = () => {
    
     {
       title: "CodeLockr : A npm package",
-      description: "An app that accepts text from user and performs certain tasks like Text to Speech,removing extra spaces,converting to upper/lower case etc...",
-      imgUrl: textutils_img,
-      projecturl:"https://github.com/vedantkesharia/TextUtils-App/tree/master"
+      description: "Codelockr: npm package providing classical ciphers for easy cryptography using JavaScript,TypeScript and React.",
+      imgUrl: codelockr_img,
+      projecturl:"https://www.npmjs.com/package/codelockr"
     },
     
   ];
