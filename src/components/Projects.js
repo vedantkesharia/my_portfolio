@@ -63,23 +63,23 @@ export const Projects = () => {
       imgUrl: codesync_img,
       projecturl:'https://codesyncweb.vercel.app/'
     },
+    
+   
+    {
+      title: "CodeLockr : A npm package",
+      description: "An app that accepts text from user and performs certain tasks like Text to Speech,removing extra spaces,converting to upper/lower case etc...",
+      imgUrl: textutils_img,
+      projecturl:"https://github.com/vedantkesharia/TextUtils-App/tree/master"
+    },
+    
+  ];
+
+  const projects2=[
     {
       title: "BrainAI",
       description: "An AI web application with functions like code/music/video/image generation from any text",
       imgUrl: brainai_img,
       projecturl:"https://brainai.vercel.app/"
-    },
-   
-    
-  ];
-
-  const projects2=[
-
-    {
-      title: "TextUtils",
-      description: "An app that accepts text from user and performs certain tasks like Text to Speech,removing extra spaces,converting to upper/lower case etc...",
-      imgUrl: textutils_img,
-      projecturl:"https://github.com/vedantkesharia/TextUtils-App/tree/master"
     },
     {
       title: "Flexibble",

@@ -187,7 +187,7 @@ const Contact3 = () => {
                     </Col>
                     <Col size={12} sm={6}  className="px-1">
                       <textarea rows="6" minLength="5" name="message" placeholder="Message"  value={formData.message} onChange={handleInputChange}></textarea>
-                      {/* <button onClick={handleSubmit} type="submit" value="Send"><span>{buttonText}</span></button> */}
+                      {/* <button onClick={handleSubmit0} type="submit" value="Send"><span>{buttonText}</span></button> */}
                       {errors.message && <span className="error">{errors.message}</span>}
                       <input id="input_mail2" className='input_mail' type="submit" value={buttonText} />
                     </Col>
