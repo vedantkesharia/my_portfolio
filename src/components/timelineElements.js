@@ -60,10 +60,28 @@ let timelineElements = [
   },
   {
     id: 7,
+    title: "AI/ML Intern",
+    location: "Datamatics",
+    description:
+      "Implemented LLMs and Retrieval-Augmented Generation (RAG) to automate complex text analysis, used RAG for accurate retrieval and contextual understanding to enhance data extraction and decision-making.",
+    date: "August 2023 - May 2024",
+    icon: "work",
+  },
+  {
+    id: 8,
     title: "Vice Chairperson",
     location: "DJ Init.AI",
     description:
-    "Acting as the Vice Chairperson at DJ Init.AI; led a team of 60+ members in an AI/ML research club of collegeguiding research, organizing activities, and conducting boot camps on AI/ML technologies",
+    "Acting as the Vice Chairperson at DJ Init.AI; led a team of 60+ members in an AI/ML research club of collegeguiding research, organizing activities, and conducting boot camps on AI/ML technologies.",
+    date: "Present",
+    icon: "work",
+  },
+  {
+    id: 9,
+    title: "Research Intern",
+    location: "IIT Patna",
+    description:
+    "Developing detailed insights into the application and limitations of VLMs and LLMs in interpreting localizedniche sports phenomena, highlighting their effectiveness in understanding specialized cultural contexts.",
     date: "Present",
     icon: "work",
   },
