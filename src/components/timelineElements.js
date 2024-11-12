@@ -55,6 +55,15 @@ let timelineElements = [
     location: "DJ Init.AI",
     description:
       "Currently Technical Head at DJ Init.AI which is an AI/ML research club of IT department, responsible for maintaining and updating website.",
+    date: "August 2023 - May 2024",
+    icon: "work",
+  },
+  {
+    id: 7,
+    title: "Vice Chairperson",
+    location: "DJ Init.AI",
+    description:
+    "Acting as the Vice Chairperson at DJ Init.AI; led a team of 60+ members in an AI/ML research club of collegeguiding research, organizing activities, and conducting boot camps on AI/ML technologies",
     date: "Present",
     icon: "work",
   },
